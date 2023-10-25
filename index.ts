@@ -23,3 +23,7 @@ if ( Enable.value == true){
 	const position = new Vector2(300, 300)
 	RendererSDK.FilledCircle(position, vectorSize, Color.Yellow.SetA(255))
 }
+
+if (Enable.value == false){
+	console.log("false")
+}
