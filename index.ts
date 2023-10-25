@@ -23,25 +23,18 @@ EventsSDK.on("Draw", () => {
 
 	if ( Enable.value == true)
 	{	
-
 		const MyHero = LocalPlayer?.Hero?.Name
 
-		if ( InputManager.IsMouseKeyDown(0x01)){
+		if ( InputManager.IsMouseKeyDown(0x01) && InputManager?.CursorOnScreen == position){
 			position = InputManager?.CursorOnScreen
 		}
-		
-		console.log(position)
 
-		RendererSDK.OutlinedRect(position ,new Vector2(100,100))
-
-		RendererSDK.Image(
-			`panorama/images/heroes/icons/${MyHero}_png.vtex_c`,
+		RendererSDK.Image(`panorama/images/heroes/icons/${MyHero}_png.vtex_c`,
 			position,
 			0,
 			new Vector2(100,100),
 			new Color(255, 255, 255, 255)
 		)	
 	}
-
 })
 
