@@ -17,16 +17,9 @@ const testTask = Entry.AddNode(
 
 const Enable = testTask.AddToggle("State")
 
-EventsSDK.on("GameStarted", () => {
-	if (Enable.value == true){
 
-
-		const vectorSize = new Vector2(100, 100)
-
-		const position = new Vector2(300, 300)
-
-		RendererSDK.FilledRect(position, vectorSize, Color.Yellow.SetA(255))
-	}
-
-
-})
+if ( Enable.value == true){
+	const vectorSize = new Vector2(100, 100)
+	const position = new Vector2(300, 300)
+	RendererSDK.FilledCircle(position, vectorSize, Color.Yellow.SetA(255))
+}
