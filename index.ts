@@ -5,7 +5,7 @@ import {
 	RendererSDK,
 	Color,
 	LocalPlayer,
-	Hero
+	InputManager
 } from "github.com/octarine-public/wrapper/index"
 
 const Entry = Menu.AddEntry("Utility")
@@ -20,17 +20,15 @@ const Enable = testTask.AddToggle("State")
 
 EventsSDK.on("Draw", () => {
 	if ( Enable.value == true)
-	{
+	{	
+		const Cursor = InputManager?.CursorOnScreen
 		const MyHero = LocalPlayer?.Hero?.Name
-		const vectorSize = new Vector2(100, 100)
-		const position = new Vector2(300, 300)
-		//RendererSDK.FilledCircle(position, vectorSize, Color.Yellow.SetA(255))
-
+		console.log(Cursor)
 		RendererSDK.Image(
 			`panorama/images/heroes/icons/${MyHero}_png.vtex_c`,
-			position,
+			new Vector2(100, 100),
 			0,
-			vectorSize,
+			new Vector2(100, 100),
 			new Color(255, 255, 255, 255)
 		)	
 	}
