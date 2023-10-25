@@ -24,5 +24,5 @@ const testTask = Entry.AddNode(
 const Enable = testTask.AddToggle("State")
 
 EventsSDK.on("GameStarted", () => {
-	console.log("LocalPlayer")
+	console.log(Enable.value)
 })
