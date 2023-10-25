@@ -22,18 +22,17 @@ EventsSDK.on("Draw", () => {
 	if ( Enable.value == true)
 	{
 		const MyHero = LocalPlayer?.Hero?.Name
-		console.log(MyHero)
 		const vectorSize = new Vector2(100, 100)
 		const position = new Vector2(300, 300)
-		RendererSDK.FilledCircle(position, vectorSize, Color.Yellow.SetA(255))
+		//RendererSDK.FilledCircle(position, vectorSize, Color.Yellow.SetA(255))
 
-		// RendererSDK.Image(
-		// 	`panorama/images/heroes/icons/${value.ally.Name}_png.vtex_c`,
-		// 	position,
-		// 	0,
-		// 	vectorSize,
-		// 	new Color(255, 255, 255, OpactitySlider.value * 2.55)
-		// )
+		RendererSDK.Image(
+			`panorama/images/heroes/icons/${MyHero}_png.vtex_c`,
+			position,
+			0,
+			vectorSize,
+			new Color(255, 255, 255, 255)
+		)	
 	}
 
 })
