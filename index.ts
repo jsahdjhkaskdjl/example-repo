@@ -19,7 +19,7 @@ const Enable = testTask.AddToggle("State")
 
 
 if ( Enable.value == true){
-	const vectorSize = new Vector2(100, 100)
+	const vectorSize = new Vector2(30, 30)
 	const position = new Vector2(300, 300)
 	RendererSDK.FilledCircle(position, vectorSize, Color.Yellow.SetA(255))
 }
