@@ -40,7 +40,7 @@ EventsSDK.on("PostDataUpdate", () => {
 
 		const position = new Vector2(100, 100)
 
-		RendererSDK.FilledCircle(position, vectorSize, Color.Yellow.SetA(100))
+		RendererSDK.FilledCircle(position, vectorSize, Color.Yellow.SetA(255))
 	}
 
 
