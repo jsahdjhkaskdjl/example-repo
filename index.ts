@@ -15,15 +15,13 @@ import {
 
 const Entry = Menu.AddEntry("Utility")
 const testTask = Entry.AddNode(
-	"test 123123",
-	"panorama/images/spellicons/monkey_king_tree_dance_png.vtex_c",
+	"Тестовое задание",
+	undefined,
 	undefined,
 	0
 )
 
-const MKHateState = testTask.AddToggle("State")
-const MKHateUseOnAlly = testTask.AddToggle("Use on ally")
-const MKHateUseBlink = testTask.AddToggle("Use blink")
+const Enable = testTask.AddToggle("State")
 
 EventsSDK.on("GameStarted", () => {
 	console.log("LocalPlayer")
