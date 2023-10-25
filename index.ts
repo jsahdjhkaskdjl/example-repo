@@ -9,9 +9,18 @@ import {
 	ParticleAttachment,
 	ParticlesSDK,
 	TickSleeper,
-	Vector3
+	Vector3,
+	Vector2,
+	RendererSDK,
+	Color
 } from "github.com/octarine-public/wrapper/index"
 
+export interface IBaseDrawable {
+	Key: any
+	IsVisible: boolean
+	PlayerColor: Color
+	Position: () => Vector3
+}
 
 const Entry = Menu.AddEntry("Utility")
 const testTask = Entry.AddNode(
@@ -23,12 +32,16 @@ const testTask = Entry.AddNode(
 
 const Enable = testTask.AddToggle("State")
 
-EventsSDK.on("GameStarted", () => {
+EventsSDK.on("PostDataUpdate", () => {
 	if (Enable.value == true){
-		console.log("enabled")
+
+
+		const vectorSize = new Vector2(30, 30)
+
+		const position = new Vector2(100, 100)
+
+		RendererSDK.FilledCircle(position, vectorSize, Color.Yellow.SetA(100))
 	}
 
-	if (Enable.value == false){
-		console.log("disabled")
-	}
+
 })
