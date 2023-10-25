@@ -21,7 +21,7 @@ const Enable = testTask.AddToggle("State")
 EventsSDK.on("Draw", () => {
 	if ( Enable.value == true)
 	{
-		const MyHero = LocalPlayer?.Hero
+		const MyHero = LocalPlayer?.Hero?.Name
 		console.log(MyHero)
 		const vectorSize = new Vector2(100, 100)
 		const position = new Vector2(300, 300)
