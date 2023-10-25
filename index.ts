@@ -1,26 +1,11 @@
 import {
-	EntityManager,
 	EventsSDK,
-	GameState,
-	item_blink,
-	LocalPlayer,
 	Menu,
-	monkey_king_tree_dance,
-	ParticleAttachment,
-	ParticlesSDK,
-	TickSleeper,
-	Vector3,
 	Vector2,
 	RendererSDK,
 	Color
 } from "github.com/octarine-public/wrapper/index"
 
-export interface IBaseDrawable {
-	Key: any
-	IsVisible: boolean
-	PlayerColor: Color
-	Position: () => Vector3
-}
 
 const Entry = Menu.AddEntry("Utility")
 const testTask = Entry.AddNode(
@@ -40,7 +25,7 @@ EventsSDK.on("GameStarted", () => {
 
 		const position = new Vector2(300, 300)
 
-		RendererSDK.FilledCircle(position, vectorSize, Color.Yellow.SetA(255))
+		RendererSDK.FilledRect(position, vectorSize, Color.Yellow.SetA(255))
 	}
 
 
