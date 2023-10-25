@@ -17,7 +17,6 @@ const testTask = Entry.AddNode(
 )
 
 const Enable = testTask.AddToggle("State")
-
 let position = new Vector2(400,400)
 
 EventsSDK.on("Draw", () => {
@@ -32,6 +31,8 @@ EventsSDK.on("Draw", () => {
 		}
 		
 		console.log(position)
+
+		RendererSDK.OutlinedRect(position ,new Vector2(100,100))
 
 		RendererSDK.Image(
 			`panorama/images/heroes/icons/${MyHero}_png.vtex_c`,
