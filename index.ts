@@ -18,14 +18,13 @@ const testTask = Entry.AddNode(
 
 const Enable = testTask.AddToggle("State")
 
+let position = new Vector2(400,400)
 
 EventsSDK.on("Draw", () => {
 
 	if ( Enable.value == true)
 	{	
 
-		let position = new Vector2(400,400)
-		
 		const MyHero = LocalPlayer?.Hero?.Name
 
 		if ( InputManager.IsMouseKeyDown(0x01)){
