@@ -21,16 +21,24 @@ const Enable = testTask.AddToggle("State")
 EventsSDK.on("Draw", () => {
 	if ( Enable.value == true)
 	{	
+		let position = new Vector2(500,500)
 		const Cursor = InputManager?.CursorOnScreen
 		const MyHero = LocalPlayer?.Hero?.Name
-		console.log(Cursor)
+
 		RendererSDK.Image(
 			`panorama/images/heroes/icons/${MyHero}_png.vtex_c`,
 			new Vector2(100, 100),
 			0,
-			new Vector2(100, 100),
+			Cursor,
 			new Color(255, 255, 255, 255)
 		)	
+
+		
+
+
+
+
+
 	}
 
 })
