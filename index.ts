@@ -23,6 +23,12 @@ const testTask = Entry.AddNode(
 
 const Enable = testTask.AddToggle("State")
 
-EventsSDK.on("GameStarted", () => {
-	console.log(Enable.value)
+EventsSDK.on("PostDataUpdate", () => {
+	if (Enable.value == true){
+		console.log("enabled")
+	}
+
+	if (Enable.value == false){
+		console.log("disabled")
+	}
 })
