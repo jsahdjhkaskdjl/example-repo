@@ -27,9 +27,9 @@ EventsSDK.on("Draw", () => {
 
 		RendererSDK.Image(
 			`panorama/images/heroes/icons/${MyHero}_png.vtex_c`,
-			new Vector2(100, 100),
-			0,
 			Cursor,
+			0,
+			new Vector2(300,300),
 			new Color(255, 255, 255, 255)
 		)	
 
