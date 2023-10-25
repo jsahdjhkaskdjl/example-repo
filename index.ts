@@ -29,7 +29,7 @@ EventsSDK.on("Draw", () => {
 			`panorama/images/heroes/icons/${MyHero}_png.vtex_c`,
 			Cursor,
 			0,
-			new Vector2(300,300),
+			new Vector2(100,100),
 			new Color(255, 255, 255, 255)
 		)	
 
