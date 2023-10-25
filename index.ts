@@ -33,7 +33,9 @@ EventsSDK.on("Draw", () => {
 			new Color(255, 255, 255, 255)
 		)	
 
-		
+		if ( InputManager.IsMouseKeyDown(0x01)){
+			console.log('left clicked')
+		}
 
 
 
