@@ -20,18 +20,19 @@ const Enable = testTask.AddToggle("State")
 
 
 EventsSDK.on("Draw", () => {
-	let position = new Vector2(400,400)
+
 	if ( Enable.value == true)
 	{	
 
-
+		let position = new Vector2(400,400)
 		
 		const MyHero = LocalPlayer?.Hero?.Name
 
 		if ( InputManager.IsMouseKeyDown(0x01)){
 			position = InputManager?.CursorOnScreen
 		}
-
+		
+		console.log(position)
 
 		RendererSDK.Image(
 			`panorama/images/heroes/icons/${MyHero}_png.vtex_c`,
