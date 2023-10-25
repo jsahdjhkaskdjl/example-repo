@@ -22,21 +22,20 @@ EventsSDK.on("Draw", () => {
 	if ( Enable.value == true)
 	{	
 		let position = new Vector2(500,500)
-		const Cursor = InputManager?.CursorOnScreen
+		//const Cursor = InputManager?.CursorOnScreen
 		const MyHero = LocalPlayer?.Hero?.Name
+
+		if ( InputManager.IsMouseKeyDown(0x01)){
+			position = InputManager?.CursorOnScreen
+		}
 
 		RendererSDK.Image(
 			`panorama/images/heroes/icons/${MyHero}_png.vtex_c`,
-			Cursor,
+			position,
 			0,
 			new Vector2(100,100),
 			new Color(255, 255, 255, 255)
 		)	
-
-		if ( InputManager.IsMouseKeyDown(0x01)){
-			console.log('left clicked')
-		}
-
 
 
 
