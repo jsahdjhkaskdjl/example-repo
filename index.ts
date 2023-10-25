@@ -21,6 +21,10 @@ const testTask = Entry.AddNode(
 	0
 )
 
+const MKHateState = testTask.AddToggle("State")
+const MKHateUseOnAlly = testTask.AddToggle("Use on ally")
+const MKHateUseBlink = testTask.AddToggle("Use blink")
+
 EventsSDK.on("GameStarted", () => {
 	console.log("LocalPlayer")
 })
