@@ -29,7 +29,7 @@ EventsSDK.on("Draw", () => {
 		let test2 = new Vector2(45,45);
 		let test3 = new Vector2(50,50);
 		if ( test2 > test1 && test2 < test3 ){
-			console.log('True')
+			console.log("works!")
 		}
 
 		const MyHero = LocalPlayer?.Hero?.Name
