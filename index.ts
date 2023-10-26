@@ -28,9 +28,7 @@ EventsSDK.on("Draw", () => {
 		let test1 = new Vector2(40,40);
 		let test2 = new Vector2(45,45);
 		// let test3 = new Vector2(50,50);
-		if ( test2 > test1 ){
-		console.log("works!");
-		};
+		console.log(test1.x)
 
 		const MyHero = LocalPlayer?.Hero?.Name;
 		console.log(position.Ceil);
