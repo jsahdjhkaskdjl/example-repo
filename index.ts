@@ -28,7 +28,7 @@ EventsSDK.on("Draw", () => {
 		let test1 = new Vector2(40,40);
 		let test2 = new Vector2(45,45);
 		// let test3 = new Vector2(50,50);
-		console.log(test1.x.valueOf)
+		console.log(test1?.x);
 
 		const MyHero = LocalPlayer?.Hero?.Name;
 		console.log(position.Ceil);
@@ -41,7 +41,7 @@ EventsSDK.on("Draw", () => {
 			0,
 			new Vector2(50,50),
 			new Color(255, 255, 255, 255)
-		)	;
-	}
+		);
+	};
 });
 
