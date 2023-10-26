@@ -27,8 +27,8 @@ EventsSDK.on("Draw", () => {
 
 		let test1 = new Vector2(40,40);
 		let test2 = new Vector2(45,45);
-		// let test3 = new Vector2(50,50);
-		if ( test1?.x < test2?.x && test1?.y < test2?.y){
+		let test3 = new Vector2(50,50);
+		if ( test1?.x < test2?.x && test1?.y < test2?.y && test2?.x < test3?.x && test2?.y < test3?.y){
 			console.log("works!")
 		}
 
