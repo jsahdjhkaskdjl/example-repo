@@ -25,19 +25,13 @@ EventsSDK.on("Draw", () => {
 	{	
 
 
-		let test1 = new Vector2(40,40);
-		let test2 = new Vector2(45,45);
-		let test3 = new Vector2(50,50);
-		if ( test1?.x < test2?.x && test1?.y < test2?.y && test2?.x < test3?.x && test2?.y < test3?.y){
-			console.log("works!")
-		}
+		let cursor_pos = InputManager?.CursorOnScreen; 
 
-		const MyHero = LocalPlayer?.Hero?.Name;
-		console.log(position.Ceil);
-		if ( InputManager.IsMouseKeyDown(0x01) ){
+		if ( InputManager.IsMouseKeyDown(0x01) && position?.x < cursor_pos?.x && position?.y < cursor_pos?.y && cursor_pos?.x < position?.x + 50 && cursor_pos?.y < position?.y + 50 ){
 			position = InputManager?.CursorOnScreen
 		};
 
+		const MyHero = LocalPlayer?.Hero?.Name;
 		RendererSDK.Image(`panorama/images/heroes/icons/${MyHero}_png.vtex_c`,
 			position,
 			0,
