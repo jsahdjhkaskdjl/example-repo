@@ -28,7 +28,7 @@ EventsSDK.on("Draw", () => {
 		let cursor_pos = InputManager?.CursorOnScreen; 
 
 		if ( InputManager.IsMouseKeyDown(0x01) && position?.x - 20 < cursor_pos?.x && position?.y - 20 < cursor_pos?.y && cursor_pos?.x < position?.x + 70 && cursor_pos?.y < position?.y + 70 ){
-			position = InputManager?.CursorOnScreen
+			position = InputManager?.CursorOnScreen;
 		};
 
 		const MyHero = LocalPlayer?.Hero?.Name;
