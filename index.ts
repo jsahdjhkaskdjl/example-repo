@@ -23,8 +23,17 @@ EventsSDK.on("Draw", () => {
 
 	if ( Enable.value == true)
 	{	
-		const MyHero = LocalPlayer?.Hero?.Name
 
+
+		let test1 = new Vector2(40,40);
+		let test2 = new Vector2(45,45);
+		let test3 = new Vector2(50,50);
+		if ( test2 > test1 && test2 < test3 ){
+			console.log('True')
+		}
+
+		const MyHero = LocalPlayer?.Hero?.Name
+		console.log(position.Ceil)
 		if ( InputManager.IsMouseKeyDown(0x01) ){
 			position = InputManager?.CursorOnScreen
 		}
@@ -32,7 +41,7 @@ EventsSDK.on("Draw", () => {
 		RendererSDK.Image(`panorama/images/heroes/icons/${MyHero}_png.vtex_c`,
 			position,
 			0,
-			new Vector2(100,100),
+			new Vector2(50,50),
 			new Color(255, 255, 255, 255)
 		)	
 	}
